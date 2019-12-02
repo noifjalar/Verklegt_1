@@ -1,14 +1,22 @@
 def open_file(filename) :
-    file_object = open(filename, "r")
-    return file_object
+    try:
+        file_stream = open(filename, "r")
+        return file_stream
+    except FileNotFoundError :
+        return None
 
 def make_crew_dict(file_object) :
     crew_dict= {}
+    header = True
     for line in file_object :
-        ssn,name,role,rank,licence = line.strip().split(",")
+        if header :
+            header = False
+            continue
+        else: 
+            ssn,name,role,rank,licence = line.strip().split(",")
         
-        key = name
-        crew_dict[key] = (int(ssn), role, rank, licence)
+            key = name
+            crew_dict[key] = (int(ssn), role, rank, licence)
     return crew_dict
         
 def main() :
