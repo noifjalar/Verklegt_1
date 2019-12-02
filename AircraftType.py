@@ -5,3 +5,4 @@ with open('AircraftType.csv', newline= '') as csvfile:
     for row in reader:
         print(row)
         # print(row['planeTypeId'], row['planeType'])
+        
