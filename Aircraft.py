@@ -13,3 +13,4 @@ class AircraftTypeModel:
     def __init__(self):
         self.planeInsignia = ""
         self.planeTypeId = ""
+       

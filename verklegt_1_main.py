@@ -1,3 +1,7 @@
+import csv
+
+
+
 def print_main_menu():
     print("\tMain Menu")
     print("")
@@ -45,20 +49,31 @@ def register_employee():
     new_emp.append(ssn)
     address = input("Address: ")
     new_emp.append(address)
-    home_phone = input("Home phone: ")
-    new_emp.append(home_phone)
+    role = input("Role: ")
+    new_emp.append(role)
+    rank = input("Rank: ")
+    new_emp.append(rank)
     mobile = input("Mobile: ")
     new_emp.append(mobile)
-    email = input("Email: ")
-    new_emp.append(email)
-    emp = Employee(name, ssn, address)
-    emp.write_to_csv("Crew.csv")
+    licence = input("Licence: ")
+    new_emp.append(licence)
+    #emp = Employee(name, ssn, address)
+    #emp.write_to_csv("Crew.csv")
     
     
-    new_emp4print = (",".join(new_emp))
-    print(new_emp4print)
 
-    crew_file = open("Crew.csv","a")
+
+
+    new_emp4print = (",".join(new_emp))
+    # print(new_emp4print)
+
+    # crew_file = open("Crew.csv","a")
+
+    with open("Crew.csv","a") as crew_file:
+        crew_file.write("\n")
+        crew_file.write(new_emp4print)
+
+    #print(crew_file)
 
     
     
