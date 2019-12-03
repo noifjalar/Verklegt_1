@@ -30,15 +30,20 @@ def choose_main_menu(choice):
     elif choice == 7:
         chreate_voyage()
     elif choice.lower() == "q":
-XXXXXXXX
+        #Vantar ehv hérna
     else:
         print("Input error! Try again")
-XXXXXXXX
+        # Hérna líka
+    return None
+
+def register_employee():
+
 
 
 def main() :
     choice = print_main_menu()
     choose_main_menu(choice)
+
 
 main()
 
