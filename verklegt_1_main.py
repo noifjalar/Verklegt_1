@@ -15,21 +15,22 @@ def print_main_menu():
     return choice
 
 def choose_main_menu(choice):
-    if choice == 1:
+    if choice == "1":
         register_employee()
-    elif choice == 2:
+    elif choice == "2":
         change_employee_info()
-    elif choice == 3:
+    elif choice == "3":
         assign_cabin_pilot_to_voyage()
-    elif choice == 4:
+    elif choice == "4":
         display_voyage()
-    elif choice == 5:
+    elif choice == "5":
         register_destination()
-    elif choice == 6:
+    elif choice == "6":
         register_airplanes()
-    elif choice == 7:
+    elif choice == "7":
         chreate_voyage()
     elif choice.lower() == "q":
+        print("")
         #Vantar ehv hérna
     else:
         print("Input error! Try again")
@@ -37,6 +38,27 @@ def choose_main_menu(choice):
     return None
 
 def register_employee():
+    new_emp = []
+    name = input("Name: ")
+    new_emp.append(name)
+    ssn = input("SSN: ")
+    new_emp.append(ssn)
+    address = input("Address: ")
+    new_emp.append(address)
+    home_phone = input("Home phone: ")
+    new_emp.append(home_phone)
+    mobile = input("Mobile: ")
+    new_emp.append(mobile)
+    email = input("Email: ")
+    new_emp.append(email)
+    
+    *new_emp.strip(",")
+
+    #with open("Crew.csv","a") as crew_file:
+        
+        #crew_file.write(new_emp)
+    print(*new_emp)
+    
 
 
 
