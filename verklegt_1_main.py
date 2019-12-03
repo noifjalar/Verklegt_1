@@ -52,12 +52,12 @@ def register_employee():
     email = input("Email: ")
     new_emp.append(email)
     
-    *new_emp.strip(",")
+    new_emp4print = (",".join(new_emp))
+    print(new_emp4print)
 
-    #with open("Crew.csv","a") as crew_file:
-        
-        #crew_file.write(new_emp)
-    print(*new_emp)
+    crew_file = open("Crew.csv","w")
+
+    crew_file = crew_file + new_emp4print
     
 
 
