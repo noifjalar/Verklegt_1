@@ -37,7 +37,12 @@ def choose_main_menu(choice):
     return None
 
 def register_employee():
-
+    name = input("Name: ")
+    ssn = input("SSN: ")
+    address = input("Address: ")
+    home_phone = input("Home phone: ")
+    mobile = input("Mobile: ")
+    email = input("Email: ")
 
 
 def main() :
