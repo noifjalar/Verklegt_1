@@ -51,13 +51,16 @@ def register_employee():
     new_emp.append(mobile)
     email = input("Email: ")
     new_emp.append(email)
+    emp = Employee(name, ssn, address)
+    emp.write_to_csv("Crew.csv")
+    
     
     new_emp4print = (",".join(new_emp))
     print(new_emp4print)
 
-    crew_file = open("Crew.csv","w")
+    crew_file = open("Crew.csv","a")
 
-    crew_file = crew_file + new_emp4print
+    
     
 
 
