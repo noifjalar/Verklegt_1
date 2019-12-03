@@ -16,3 +16,15 @@ class AircraftTypeModel:
     def __init__(self):
         self.planeTypeId = ""
         self.manufacturer = ""
+        self.model = ""
+        self.capacity = ""
+        self.emptyWeight = ""
+        self.maxTakeoffWeight = ""
+        self.unitThrust = ""
+        self.serviceceiling = ""
+        self.lenght = ""
+        self.height = ""
+        self.wingspan = ""
+        
+
+
