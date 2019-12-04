@@ -73,7 +73,7 @@ def register_employee():
         crew_file.write("\n")
         crew_file.write(new_emp4print)
 
-    #print(crew_file)
+    #print(crew_file)æ
 
     
     
