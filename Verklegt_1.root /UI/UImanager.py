@@ -7,6 +7,7 @@ class UImanager :
 
     def main_menu(self) :
         choice = ""
+        the_instance = LogicManager()
         while choice != "q" :
             print("\tMain Menu")
             print("")
@@ -25,21 +26,19 @@ class UImanager :
             choice = input("Select an operation with a corresponding number: ").lower()
             choice = str(choice)
             if choice == "1":
-                the_instance = LogicManager()
-                the_ret_str = the_instance.register_employee()
-                print(the_ret_str)
+                the_instance.register_employee()
             elif choice == "2":
-                change_employee_info()
+                the_instance.change_employee_info()
             elif choice == "3":
-                assign_cabin_pilot_to_voyage()
+                the_instance.assing_cabin_pilot_to_voyage()
             elif choice == "4":
-                display_voyage()
+                the_instance.display_voyage()
             elif choice == "5":
-                register_destination()
+                the_instance.register_destination()
             elif choice == "6":
-                register_airplanes()
+                the_instance.register_airplanes()
             elif choice == "7":
-                chreate_voyage()
+                the_instance.create_voyage()
             elif choice == "q":
                 break
             else:
