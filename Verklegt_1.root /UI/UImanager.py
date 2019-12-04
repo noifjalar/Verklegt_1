@@ -1,5 +1,5 @@
 from Logic.LogicManager import LogicManager
-
+from Data.DataManager import DataManager
 class UImanager :
     def __init__(self) :
         self.__ = LogicManager()
@@ -22,10 +22,12 @@ class UImanager :
             print("\t(7) - Create voyage") #7
             print("\t Press q to quit")
 
-            choice == input("Select an operation with a corresponding number: ").lower()
-
+            choice = input("Select an operation with a corresponding number: ").lower()
+            choice = str(choice)
             if choice == "1":
-                register_employee()
+                the_instance = DataManager()
+                the_ret_str = the_instance.myprint()
+                print(the_ret_str)
             elif choice == "2":
                 change_employee_info()
             elif choice == "3":
@@ -38,6 +40,8 @@ class UImanager :
                 register_airplanes()
             elif choice == "7":
                 chreate_voyage()
+            elif choice == "q":
+                break
             else:
                 print("Input error! Try again")
                 self.main_menu()
