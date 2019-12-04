@@ -16,9 +16,9 @@ class EmployeeIO:
         self.phonenumber = phonenumber
 
     def __str__(self):
-        return f"Name: {self.name} - SSN: {self.ssn} - role: {self.role} - licence: {self.licence} - address: {self.address} - phonenumber: {self.phonenumber}"
+        return f"Name: {self.name} - SSN: {self.ssn} - role: {self.role} - licence: {self.licence} - address: {self.address} - phonenumber: {self.phonenumber} "
 
-    def write_self_to_csv(path_to_csv):
+    def write_self_to_csv(self, path_to_csv):
         with(open(path_to_csv, "a")) as csv_file:
             csv_file.write()
 #           return ?????
@@ -31,8 +31,8 @@ class CrewIO():
         
     def __str__(self) :
         result_str = ''
-        for emp in self.crew.items():
-            result_str += "{}: {}\n".format(self.crew[0], self.crew[1:])
+        for cha in self.crew :
+            result_str += str(cha)
         return result_str
 
     def __read_data(self, file_object) :
@@ -44,11 +44,16 @@ class CrewIO():
             else: 
                 ssn, name, role, rank, licence, address, phonenumber = line.strip().split(",")
                 emp = EmployeeIO(ssn, name, role, rank, licence, address, phonenumber)
-        return self.crew[emp]
+                self.crew.append(emp)
+        return self.crew
+        #return self.crew[emp]
 
 filename = "Crew.csv"    
 file_stream = open_file(filename)
 crew = CrewIO(file_stream)
 print(crew)
+emp = EmployeeIO("210397-2059", "Rósa", "pilot", "captain", "A-32", "Kvistavellir", "821-3738")
+emp.write_self_to_csv(filename)
+
 
 
