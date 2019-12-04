@@ -1,0 +1,19 @@
+Setjið upp base-case eftir videoleigu-dæminu á Piazza.
+
+Náið að keyra algjöra "bare-bones" virkni í forritinu ykkar og bætið svo kjöti á beinin.
+
+Þeas útfærið inngangspunkt og látið layerana tala saman. UI talar við Logic, Logic talar við Data.
+
+Hafið aðeins einn klasa í hverri skrá og látið skránna heita eftir klasanum.
+
+Hafið allar skrár sem tilheyra hverjum layer í sér möppu.
+
+Hafið model-klasana í sér möppu.
+
+Model klasarnir þurfa að hafa smið eða set föll sem gefa eigindum þeirra (attributes) gildi.
+
+Hafið csv.skrárnar (töflurnar ykkar) í sér möppu.
+
+Hafið eina __main__.py skrá sem inngangspunkt í forritið
+
+main skráin importar UI, býr til tilvik af honum og kallar á fall sem birtir main menu.
