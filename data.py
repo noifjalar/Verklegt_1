@@ -16,12 +16,23 @@ class EmployeeIO:
         self.phonenumber = phonenumber
 
     def __str__(self):
-        return f"Name: {self.name} - SSN: {self.ssn} - role: {self.role} - licence: {self.licence} - address: {self.address} - phonenumber: {self.phonenumber} "
+        return "Name: {self.name} - SSN: {self.ssn} - role: {self.role} - licence: {self.licence} - address: {self.address} - phonenumber: {self.phonenumber} "
+
+    def make_self_writeable(self):
+        str = self.ssn + ','
+        str += self.name + ','
+        str += self.role + ','
+        str += self.rank + ','
+        str += self.licence + ','
+        str += self.address + ','
+        str += self.phonenumber
+        return str
 
     def write_self_to_csv(self, path_to_csv):
+        str = self.make_self_writeable()
         with(open(path_to_csv, "a")) as csv_file:
-            csv_file.write()
-#           return ?????
+            csv_file.write(str)  
+
 
 class CrewIO():
     def __init__(self, file_stream = None) :
@@ -46,14 +57,18 @@ class CrewIO():
                 emp = EmployeeIO(ssn, name, role, rank, licence, address, phonenumber)
                 self.crew.append(emp)
         return self.crew
-        #return self.crew[emp]
 
 filename = "Crew.csv"    
 file_stream = open_file(filename)
 crew = CrewIO(file_stream)
-print(crew)
-emp = EmployeeIO("210397-2059", "Rósa", "pilot", "captain", "A-32", "Kvistavellir", "821-3738")
+ssn = input("SSN: ")
+name = input("Name: ")
+role = input("Role: ")
+rank = input("Rank: ")
+licence = input("Licence: ")
+address = input("Address: ")
+phonenumber = input("Phonenumber: ")
+emp = EmployeeIO(ssn, name, role, rank, licence, address, phonenumber)
 emp.write_self_to_csv(filename)
-
 
 
