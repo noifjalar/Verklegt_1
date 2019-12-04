@@ -10,3 +10,6 @@ class Employee :
 
     def __str__(self):
         return "Name: {self.name} - SSN: {self.ssn} - role: {self.role} - licence: {self.licence} - address: {self.address} - phonenumber: {self.phonenumber} "
+
+    def get_ssn(self, ssn):
+        return self.ssn
