@@ -25,8 +25,8 @@ class UImanager :
             choice = input("Select an operation with a corresponding number: ").lower()
             choice = str(choice)
             if choice == "1":
-                the_instance = DataManager()
-                the_ret_str = the_instance.myprint()
+                the_instance = LogicManager()
+                the_ret_str = the_instance.register_employee()
                 print(the_ret_str)
             elif choice == "2":
                 change_employee_info()
