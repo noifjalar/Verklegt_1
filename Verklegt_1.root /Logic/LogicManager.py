@@ -8,9 +8,6 @@ class LogicManager :
 
     def register_employee():
 
-
-    
-
         new_emp = []
         name = input("Name: ")
         new_emp.append(name)
@@ -36,6 +33,20 @@ class LogicManager :
 
         # crew_file = open("Crew.csv","a")
 
-    with open("Crew.csv","a") as crew_file:
-        crew_file.write("\n")
-        crew_file.write(new_emp4print)
+        with open("Crew.csv","a") as crew_file:
+            crew_file.write("\n")
+            crew_file.write(new_emp4print)
+
+    
+    def change_employee_info():
+        pass
+    def assign_cabin_pilot_to_voyage():
+        pass
+    def display_voyage():
+        pass
+    def register_destination():
+        pass
+    def register_airplanes():
+        pass
+    def create_voyage():
+        pass
